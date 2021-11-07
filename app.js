@@ -78,7 +78,7 @@ app.delete("/remove",(req,res)=>{
 
 
 
-// app.deleteCompletedTasks("/remove",(req,res)=>{
+// app.deleteCompletedTasks("/removeCompletedTasks",(req,res)=>{
 //     //find index to update specific element
 //     const funded=tasks.filter(item => item.isCompleted);
 //     const index=tasks.indexOf(funded);
@@ -88,7 +88,7 @@ app.delete("/remove",(req,res)=>{
 //     res.status(200);
 // })
 
-// app.deleteUnCompletedTasks("/remove",(req,res)=>{
+// app.deleteUnCompletedTasks("/removeUnCompletedTasks",(req,res)=>{
 //     //find index to update specific element
 //     const funded=tasks.filter(item => !item.isCompleted);
 //     const index=tasks.indexOf(funded);
@@ -98,7 +98,7 @@ app.delete("/remove",(req,res)=>{
 //     res.status(200);
 // })
 
-// app.deleteAllTasks("/remove",(req,res)=>{
+// app.deleteAllTasks("/removeAllTasks",(req,res)=>{
 //     //delete all tasks
 //     tasks.length=0;
 //     res.json(tasks);
