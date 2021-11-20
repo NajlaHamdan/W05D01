@@ -57,53 +57,53 @@ app.delete("/remove",(req,res)=>{
 })
 
 //-------------------Extra Function----------------
-// app.getTaskById("/spacificTask",(req,res,id)=>{
-//     const id=req.query.id;
-//     const task=tasks.find(item=>item.id==id);
-//     res.json(task);
-//     res.status(200);
-// })
+app.get("/getTaskById",(req,res,id)=>{
+    const id=req.query.id;
+    const task=tasks.find(item=>item.id==id);
+    res.json(task);
+    res.status(200);
+})
 
-// app.getCompletedTasks("/CompletedTasks",(req,res)=>{
-//     const task=tasks.filter(item=>item.isCompleted==true);
-//     res.json(task);
-//     res.status(200);
-// })
+app.get("/getCompletedTasks",(req,res)=>{
+    const task=tasks.filter(item=>item.isCompleted==true);
+    res.json(task);
+    res.status(200);
+})
 
-// app.getUnCompletedTasks("/UnCompletedTasks",(req,res)=>{
-//     const task=tasks.filter(item=>!item.isCompleted);
-//     res.json(task);
-//     res.status(200);
-// })
+app.get("/getUnCompletedTasks",(req,res)=>{
+    const task=tasks.filter(item=>!item.isCompleted);
+    res.json(task);
+    res.status(200);
+})
 
 
 
-// app.deleteCompletedTasks("/removeCompletedTasks",(req,res)=>{
-//     //find index to update specific element
-//     const funded=tasks.filter(item => item.isCompleted);
-//     const index=tasks.indexOf(funded);
-//     //delete element
-//     tasks.splice(index,1);
-//     res.json(tasks);
-//     res.status(200);
-// })
+app.delete("/removeCompletedTasks",(req,res)=>{
+    //find index to update specific element
+    const funded=tasks.filter(item => item.isCompleted);
+    const index=tasks.indexOf(funded);
+    //delete element
+    tasks.splice(index,1);
+    res.json(tasks);
+    res.status(200);
+})
 
-// app.deleteUnCompletedTasks("/removeUnCompletedTasks",(req,res)=>{
-//     //find index to update specific element
-//     const funded=tasks.filter(item => !item.isCompleted);
-//     const index=tasks.indexOf(funded);
-//     //delete element
-//     tasks.splice(index,1);
-//     res.json(tasks);
-//     res.status(200);
-// })
+app.delete("/removeUnCompletedTasks",(req,res)=>{
+    //find index to update specific element
+    const funded=tasks.filter(item => !item.isCompleted);
+    const index=tasks.indexOf(funded);
+    //delete element
+    tasks.splice(index,1);
+    res.json(tasks);
+    res.status(200);
+})
 
-// app.deleteAllTasks("/removeAllTasks",(req,res)=>{
-//     //delete all tasks
-//     tasks.length=0;
-//     res.json(tasks);
-//     res.status(200);
-// })
+app.delete("/removeAllTasks",(req,res)=>{
+    //delete all tasks
+    tasks.length=0;
+    res.json(tasks);
+    res.status(200);
+})
 
 app.listen(port,()=>{
     console.log(`app run on port=${port}`);
