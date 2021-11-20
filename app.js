@@ -67,7 +67,7 @@ app.delete("/remove",(req,res)=>{
 // app.getCompletedTasks("/CompletedTasks",(req,res)=>{
 //     const task=tasks.filter(item=>item.isCompleted==true);
 //     res.json(task);
-//     res.status(200);
+//     res.status(200);lllllll
 // })
 
 // app.getUnCompletedTasks("/UnCompletedTasks",(req,res)=>{
